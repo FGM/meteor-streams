@@ -1,14 +1,16 @@
 Package.describe({
-  name: "fgm:streams",
-  version: "0.1.18",
-  git: "https://github.com/FGM/meteor-streams",
   documentation: "README.md",
-  summary: "DB less realtime communication for meteor. A fork of arunoda:streams for Meteor 1.2.1."
+  git: "https://github.com/FGM/meteor-streams",
+  name: "fgm:streams",
+  summary: "DB less realtime communication for meteor. A fork of arunoda:streams for Meteor 1.2.1/1.3.x.",
+  version: "0.1.18"
 });
 
 Package.on_use(function (api, where) {
-  api.use('http');
+  api.versionsFrom('METEOR@0.9.0');
+
   api.use('check');
+  api.use('http');
   api.use('random');
   api.use('underscore', ['client', 'server']);
 
